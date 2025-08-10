@@ -1,24 +1,42 @@
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import NavBar from './navbar';
+import HomePage from './pages/HomePage'
+import DashboardPage from './pages/DashboardPage';
+import CreateAccountPage from './pages/CreateAccountPage';
+import LoginPage from './pages/LoginPage';
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import NotFoundPage from './pages/NotFoundPage';
 
+const firebaseConfig = {
+  apiKey: "AIzaSyCybUG5nRmhVxOCRd8dWZ226BukAady3fc",
+  authDomain: "userauthentication-53b25.firebaseapp.com",
+  projectId: "userauthentication-53b25",
+  storageBucket: "userauthentication-53b25.firebasestorage.app",
+  messagingSenderId: "771062696168",
+  appId: "1:771062696168:web:a1b822897ea8ae0b1ca15d",
+  measurementId: "G-W8ZFYDY525"
+};
+
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <NavBar/>
+        <div id="page-pody">
+          <Routes>
+            <Route path="/" element={<HomePage/>}/>
+            <Route path="/dashboard" element={<DashboardPage/>}/>
+            <Route path="/login" element={<LoginPage/>}/>
+            <Route path="/create-account" element={<CreateAccountPage/>}/>
+            <Route path="*" element={<NotFoundPage/>}/>
+          </Routes>
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 

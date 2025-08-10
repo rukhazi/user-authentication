@@ -1,38 +1,100 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Quicksand:wght@300..700&display=swap');
+
+body{
+  font-family: "Quicksand", sans-serif;
+  background-color: #ffd8eb;
+}
+
+/*navbar css*/
+nav{
+  background-color: #cfd7fd;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 10px;
+}
+ul{
+  background-color: #ffe9f3;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  margin: 4px 2px;
+  padding: 15px 32px;
+}
+li {
+  float: left;
+}
+li a {
+  color: black;
+  text-align: center;
+  text-decoration: none;
+}
+.login-out{
+  font-family: "Quicksand", sans-serif;
+  background-color: #ffe9f3;
+  font-size: 15.5px;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+/*------------------------------------*/
+
+.title{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*forms: sign in and create account*/
+.form{
+  margin: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  width: 20%;
+  border-radius: 5px;
+  background-color: #ffe9f3;
+  padding: 30px;
+}
+input[type=email], select {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=password], select {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.loginbutton{
+  background-color: pink;
+  text-align: center;  
+  font-size: 16px;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+
 }
 
-.App-link {
-  color: #61dafb;
+.paragraph{
+  background-color: #ffe9f3;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: auto;
+  width: 100ch;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
