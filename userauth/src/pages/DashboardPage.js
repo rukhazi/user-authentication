@@ -1,4 +1,3 @@
-import {useState, useEffect} from 'react';
 import useUser from '../hooks/useUser'
 
 const DashboardPage = () => {
