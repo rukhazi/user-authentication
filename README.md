@@ -1,6 +1,4 @@
 # user-authentication
-
-
 Greetings! This project is going to be built upon onto two other repositories; user-authentication (current), responsivenav, and userdashboard.
 -
 In this repository, the main functions include signing in using email/password with firebase, the ability to make an account in the app, routing and personalized greeting. The purpose of this app is to make a CUTE platform for photographers to share and display their nature photography.
