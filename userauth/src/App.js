@@ -28,7 +28,7 @@ function App() {
         <NavBar/>
         <div id="page-pody">
           <Routes>
-            <Route path="/" element={<HomePage/>}/>
+            <Route path="/user-authentication" element={<HomePage/>}/>
             <Route path="/dashboard" element={<DashboardPage/>}/>
             <Route path="/login" element={<LoginPage/>}/>
             <Route path="/create-account" element={<CreateAccountPage/>}/>
