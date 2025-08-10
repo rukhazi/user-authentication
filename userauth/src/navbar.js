@@ -10,7 +10,7 @@ const NavBar = ()=>{
         <nav>
             <div>
                 <ul>
-                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/user-authentication">Home</Link></li>
                 </ul>
             </div>
             <div>
@@ -18,7 +18,7 @@ const NavBar = ()=>{
                     ?<button className="login-out"
                         onClick={() =>{
                             signOut(getAuth());
-                            navigate('/');
+                            navigate('/user-authentication');
                     }}>Log Out</button>
 
                     :<button className="login-out"
